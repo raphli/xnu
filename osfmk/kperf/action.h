@@ -40,21 +40,21 @@ struct kperf_context;
 extern int kperf_max_actions;
 
 /* bits for defining what to do on an action */
-#define SAMPLER_TH_INFO       (1U << 0)
-#define SAMPLER_TH_SNAPSHOT   (1U << 1)
-#define SAMPLER_KSTACK        (1U << 2)
-#define SAMPLER_USTACK        (1U << 3)
-#define SAMPLER_PMC_THREAD    (1U << 4)
-#define SAMPLER_PMC_CPU       (1U << 5)
-#define SAMPLER_PMC_CONFIG    (1U << 6)
-#define SAMPLER_MEMINFO       (1U << 7)
-#define SAMPLER_TH_SCHEDULING (1U << 8)
-#define SAMPLER_TH_DISPATCH   (1U << 9)
-#define SAMPLER_TK_SNAPSHOT   (1U << 10)
-#define SAMPLER_SYS_MEM       (1U << 11)
+#define SAMPLER_TH_INFO       (1U << 0)     // thread information
+#define SAMPLER_TH_SNAPSHOT   (1U << 1)     // thread snapshot
+#define SAMPLER_KSTACK        (1U << 2)     // kernel stack
+#define SAMPLER_USTACK        (1U << 3)     // user stack
+#define SAMPLER_PMC_THREAD    (1U << 4)     // thread perfmon counters
+#define SAMPLER_PMC_CPU       (1U << 5)     // cpu perfmon counters
+#define SAMPLER_PMC_CONFIG    (1U << 6)     // configurable perfmon counters
+#define SAMPLER_MEMINFO       (1U << 7)     // memory information
+#define SAMPLER_TH_SCHEDULING (1U << 8)     // thread scheduling
+#define SAMPLER_TH_DISPATCH   (1U << 9)     // thread dispatch
+#define SAMPLER_TK_SNAPSHOT   (1U << 10)    // task snapshot
+#define SAMPLER_SYS_MEM       (1U << 11)    // system memery
 #define SAMPLER_TH_INSCYC     (1U << 12)
-#define SAMPLER_TK_INFO       (1U << 13)
-#define SAMPLER_EXSTACK       (1U << 14)
+#define SAMPLER_TK_INFO       (1U << 13)    // task information
+#define SAMPLER_EXSTACK       (1U << 14)    // exclave stack?
 
 #define SAMPLER_TASK_MASK (SAMPLER_MEMINFO | SAMPLER_TK_SNAPSHOT | \
 	        SAMPLER_TK_INFO)
